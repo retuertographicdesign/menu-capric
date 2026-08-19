@@ -3,6 +3,11 @@
 Extrae la carta de El Capricho de Costa del Silencio desde Comandator
 y la guarda en menu-data.json (en la raíz del repo).
 
+Solo se sincronizan 5 secciones (a petición): Entrantes, Principales,
+Bebidas, Vermuts y Vinos. Cada una se compone agrupando una o varias
+categorías reales de Comandator (su web repite parte de la carta con
+y sin el prefijo "CARTA - "; usamos la versión numerada cuando existe).
+
 La página es una app Next.js que renderiza la carta con JavaScript, así que
 necesitamos un navegador real (Playwright), no una simple petición HTTP.
 
@@ -24,6 +29,24 @@ MENU_URL = (
 )
 
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "menu-data.json"
+
+# Qué categorías reales de Comandator alimentan cada una de nuestras 5
+# secciones finales, y en qué orden. Se combinan y deduplican por nombre.
+SECTION_MAP = [
+    ("Entrantes", ["CARTA - PRODUCTOS EN MESA"]),
+    ("Principales", [
+        "CARTA - PLATOS ELABORADOS CON CONSERVAS",
+        "CARTA - BOCADILLOS IBÉRICOS",
+    ]),
+    ("Bebidas", ["REFRESCOS Y AGUA", "CERVEZAS Y SIDRAS"]),
+    ("Vermuts", ["VERMU", "CAVAS", "CHAMPAN Y CAVAS"]),
+    ("Vinos", [
+        "CARTA - VINO POR COPAS",
+        "CARTA - VINO BLANCO AFRUTADO",
+        "CARTA - VINO BLANCO SECO",
+        "VINO TINTO",
+    ]),
+]
 
 # JS que corre DENTRO de la página ya renderizada para extraer categoría -> items.
 # Mismos selectores verificados manualmente sobre la página real (Material UI).
@@ -58,43 +81,63 @@ def clean_price(raw: str) -> str:
     return num
 
 
-def scrape() -> list[dict]:
+def scrape_raw() -> dict:
+    """Devuelve {nombre_categoria_comandator: [ {name, price}, ... ]}."""
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
         page.goto(MENU_URL, wait_until="networkidle", timeout=60000)
-        # La carta se hidrata tras la carga inicial; damos un margen extra.
         page.wait_for_selector("h6.MuiTypography-h6", timeout=30000)
         page.wait_for_timeout(1500)
         raw = page.evaluate(EXTRACT_JS)
         browser.close()
 
-    categories = []
+    by_category = {}
     for cat in raw:
         items = [
             {"name": it["name"], "price": clean_price(it["price"])}
             for it in cat["items"]
         ]
-        categories.append({"category": cat["category"], "items": items})
-    return categories
+        by_category[cat["category"]] = items
+    return by_category
+
+
+def build_sections(by_category: dict) -> list[dict]:
+    sections = []
+    for section_name, source_categories in SECTION_MAP:
+        seen = set()
+        items = []
+        for src in source_categories:
+            for it in by_category.get(src, []):
+                key = (it["name"], it["price"])
+                if key in seen:
+                    continue
+                seen.add(key)
+                items.append(it)
+        if not items:
+            print(f"AVISO: la sección '{section_name}' no encontró productos "
+                  f"(categorías buscadas: {source_categories}).", file=sys.stderr)
+        sections.append({"category": section_name, "items": items})
+    return sections
 
 
 def main() -> int:
-    categories = scrape()
+    by_category = scrape_raw()
 
-    if not categories:
+    if not by_category:
         print("ERROR: no se extrajo ninguna categoría. Comandator puede haber "
               "cambiado su estructura (selectores CSS) o la página no cargó bien.",
               file=sys.stderr)
         return 1
 
-    total_items = sum(len(c["items"]) for c in categories)
-    print(f"Extraídas {len(categories)} categorías, {total_items} productos.")
+    sections = build_sections(by_category)
+    total_items = sum(len(s["items"]) for s in sections)
+    print(f"Generadas {len(sections)} secciones, {total_items} productos.")
 
     payload = {
         "source": MENU_URL,
         "scraped_at": datetime.now(timezone.utc).isoformat(),
-        "categories": categories,
+        "categories": sections,
     }
 
     OUTPUT_PATH.write_text(
