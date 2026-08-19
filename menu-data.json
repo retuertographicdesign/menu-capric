@@ -1,123 +1,9 @@
 {
   "source": "https://www.comandator.com/es/establecimiento/capricho-de-costa-del-silencio-tenerife-arona/menu",
-  "scraped_at": "2026-08-19T14:57:21.076831+00:00",
+  "scraped_at": "2026-08-19T18:51:44.006717+00:00",
   "categories": [
     {
-      "category": "ACEITES",
-      "items": [
-        {
-          "name": "Aceitera cazorla",
-          "price": "18,50"
-        },
-        {
-          "name": "Aceite de cazorla 500",
-          "price": "7,95"
-        },
-        {
-          "name": "Aceite cazorla 750",
-          "price": "10,95"
-        },
-        {
-          "name": "Cazorla gran seleccion",
-          "price": "19,80"
-        },
-        {
-          "name": "Aceite promo de viernes",
-          "price": "8,50"
-        }
-      ]
-    },
-    {
-      "category": "SMOOTHIES",
-      "items": [
-        {
-          "name": "SMOOTHIES - batidos de fruta",
-          "price": "4,50"
-        }
-      ]
-    },
-    {
-      "category": "MONTADITOS",
-      "items": [
-        {
-          "name": "MONTADITOS",
-          "price": "3,50"
-        },
-        {
-          "name": "Pata asada por kilo",
-          "price": "65,00"
-        }
-      ]
-    },
-    {
-      "category": "PRODUCTOS CANARIOS",
-      "items": [
-        {
-          "name": "Pack de mermelada de Higo y crema Guayaba",
-          "price": "3,75"
-        },
-        {
-          "name": "Mermelada de HIGO",
-          "price": "3,20"
-        },
-        {
-          "name": "Mermelada de higo : El masapé La gomera 1987",
-          "price": "3,20"
-        },
-        {
-          "name": "Salsa : mojo Picón (salsa picante )",
-          "price": "4,10"
-        },
-        {
-          "name": "Mojo palmero con almendras",
-          "price": "3,10"
-        },
-        {
-          "name": "ALMOGROTE",
-          "price": "6,38"
-        },
-        {
-          "name": "Pack de 3 mojos",
-          "price": "7,96"
-        },
-        {
-          "name": "Salsa : mojo suave (salsa suave )",
-          "price": "2,56"
-        },
-        {
-          "name": "Salsa : mojo verde  (salsa con cilantro )",
-          "price": "2,56"
-        },
-        {
-          "name": "GALLETAS GOMERAS",
-          "price": "6,24"
-        },
-        {
-          "name": "Mojo palmero casero",
-          "price": "6,50"
-        }
-      ]
-    },
-    {
-      "category": "CAFE",
-      "items": [
-        {
-          "name": "CAFE",
-          "price": "1,60"
-        }
-      ]
-    },
-    {
-      "category": "SALCHICHON TACO",
-      "items": [
-        {
-          "name": "taco de salchichon",
-          "price": "11,88"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - PRODUCTOS EN MESA",
+      "category": "Entrantes",
       "items": [
         {
           "name": "001 1/2 racion queso de mezcla",
@@ -230,7 +116,7 @@
       ]
     },
     {
-      "category": "CARTA - PLATOS ELABORADOS CON CONSERVAS",
+      "category": "Principales",
       "items": [
         {
           "name": "031 Arbejas",
@@ -251,169 +137,7 @@
         {
           "name": "035 Fabada Asturiana",
           "price": "8,60"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - CONSERVAS CAMBADOS",
-      "items": [
-        {
-          "name": "041 Agujas de las rias baixas",
-          "price": "7,00"
         },
-        {
-          "name": "042 Berberechos",
-          "price": "12,75"
-        },
-        {
-          "name": "043 Boquerones del cantabrico",
-          "price": "12,75"
-        },
-        {
-          "name": "044 Chipirones aove",
-          "price": "10,42"
-        },
-        {
-          "name": "045 Chipirones en su tinta",
-          "price": "11,50"
-        },
-        {
-          "name": "046 Navajas alnatural",
-          "price": "11,50"
-        },
-        {
-          "name": "047 Zamburiñas en salsa gallega edición limitada",
-          "price": "10,50"
-        },
-        {
-          "name": "048 Zamburiñas en salsa gallega",
-          "price": "6,70"
-        },
-        {
-          "name": "049 Pulpo en aceite de oliva",
-          "price": "8,50"
-        },
-        {
-          "name": "050 Berberechos rias baixas",
-          "price": "16,50"
-        },
-        {
-          "name": "051 Ventresca",
-          "price": "12,12"
-        },
-        {
-          "name": "052 Huevas de merluza",
-          "price": "7,80"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - CONSERVAS REAL CONSERVERA",
-      "items": [
-        {
-          "name": "061 ventresca aove",
-          "price": "10,40"
-        },
-        {
-          "name": "063 navajas 7/10",
-          "price": "25,20"
-        },
-        {
-          "name": "062 zamburiñas en salsa",
-          "price": "8,40"
-        },
-        {
-          "name": "064 sardinillas aove",
-          "price": "10,95"
-        },
-        {
-          "name": "065 mejillones en escabeche",
-          "price": "12,80"
-        },
-        {
-          "name": "066 Berberechos grandes",
-          "price": "27,96"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - ANCHOAS",
-      "items": [
-        {
-          "name": "071 anchoas lata pequeña",
-          "price": "7,80"
-        },
-        {
-          "name": "072 anchoas premium",
-          "price": "18,60"
-        },
-        {
-          "name": "gildas",
-          "price": "23,20"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - LONCHEADOS",
-      "items": [
-        {
-          "name": "081 Jamon 100% 80gr",
-          "price": "15,95"
-        },
-        {
-          "name": "082 Presa iberica 80gr",
-          "price": "8,50"
-        },
-        {
-          "name": "083 Lomo iberico 80gr",
-          "price": "8,90"
-        },
-        {
-          "name": "084 Salchichon bellota",
-          "price": "3,90"
-        },
-        {
-          "name": "085 Morcon iberico",
-          "price": "7,50"
-        },
-        {
-          "name": "086 Lomo iberico cebo",
-          "price": "6,95"
-        },
-        {
-          "name": "087 Chorizo iberico",
-          "price": "3,80"
-        },
-        {
-          "name": "088 Jamon 50% cebo",
-          "price": "7,95"
-        },
-        {
-          "name": "089 Jamon 50% cebo de campo",
-          "price": "11,95"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - TAQUITOS",
-      "items": [
-        {
-          "name": "091 Taquitos de Jamón Ibérico",
-          "price": "3,50"
-        },
-        {
-          "name": "092 Taquitos de embutidos",
-          "price": "3,50"
-        },
-        {
-          "name": "093 Taquitos 100%",
-          "price": "4,50"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - BOCADILLOS IBÉRICOS",
-      "items": [
         {
           "name": "101 1/2 bocadillo jamon iberico",
           "price": "3,45"
@@ -445,643 +169,7 @@
       ]
     },
     {
-      "category": "CARTA - MONTADITOS",
-      "items": [
-        {
-          "name": "111 MONTADITOS",
-          "price": "3,50"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - QUESOS",
-      "items": [
-        {
-          "name": "122 almogrote 220gr",
-          "price": "8,30"
-        },
-        {
-          "name": "Cuña de queso",
-          "price": "7,80"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - SNACKS",
-      "items": [
-        {
-          "name": "131 Papas Lolita - Original",
-          "price": "2,50"
-        },
-        {
-          "name": "132 TORREZNOS. 400gr",
-          "price": "4,50"
-        },
-        {
-          "name": "133 Aceitunas chupadedos",
-          "price": "4,50"
-        },
-        {
-          "name": "134 sardinillas aove",
-          "price": "11,80"
-        },
-        {
-          "name": "135 TORREZNOS 200GR",
-          "price": "6,50"
-        },
-        {
-          "name": "136 Aceitunas lets go",
-          "price": "1,50"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - SMOOTHIES",
-      "items": [
-        {
-          "name": "141 SMOOTHIES - batidos de fruta",
-          "price": "4,50"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - CAFÉ",
-      "items": [
-        {
-          "name": "151 CAFE",
-          "price": "1,60"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - VINO POR COPAS",
-      "items": [
-        {
-          "name": "161 Copa vino blanco afrutado canario",
-          "price": "3,90"
-        },
-        {
-          "name": "162 Copa tinto rioja",
-          "price": "3,90"
-        },
-        {
-          "name": "163 Copa vino blanco seco",
-          "price": "3,90"
-        },
-        {
-          "name": "164 Copa tinto rivera",
-          "price": "3,90"
-        },
-        {
-          "name": "165 Copa vino Yaiza afrutado",
-          "price": "4,90"
-        },
-        {
-          "name": "166 Copa vino el salvio",
-          "price": "4,90"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - VINO BLANCO AFRUTADO",
-      "items": [
-        {
-          "name": "171 Vino Blanco Afrutado tajinaste tenerife",
-          "price": "15,50"
-        },
-        {
-          "name": "172 Locartas blanco afrutado",
-          "price": "12,50"
-        },
-        {
-          "name": "173 Vino afrutado la jirafa",
-          "price": "14,50"
-        },
-        {
-          "name": "174 Flor de chasna afrutado",
-          "price": "13,50"
-        },
-        {
-          "name": "175 Copa vino blanco afrutado",
-          "price": "3,90"
-        }
-      ]
-    },
-    {
-      "category": "CARTA - VINO BLANCO SECO",
-      "items": [
-        {
-          "name": "181 Vino Blanco Carramimbre Blanco",
-          "price": "12,90"
-        },
-        {
-          "name": "182 Vino O Luar do Sil – Godello 75 cl",
-          "price": "19,95"
-        },
-        {
-          "name": "183 Gran feudo hoya de lobos",
-          "price": "12,50"
-        }
-      ]
-    },
-    {
-      "category": "ANCHOAS",
-      "items": [
-        {
-          "name": "anchoas lata pequeña",
-          "price": "7,80"
-        },
-        {
-          "name": "anchoas premium",
-          "price": "18,60"
-        },
-        {
-          "name": "Anchoas mantequilla",
-          "price": "9,60"
-        }
-      ]
-    },
-    {
-      "category": "BOCADILLOS IBERICOS",
-      "items": [
-        {
-          "name": "1/2 bocadillo jamon iberico",
-          "price": "3,45"
-        },
-        {
-          "name": "Bocadillo jamon iberico",
-          "price": "5,75"
-        },
-        {
-          "name": "Bocadillo chorizo iberico",
-          "price": "2,20"
-        },
-        {
-          "name": "Bocadillo de  Salchichon iberico",
-          "price": "2,20"
-        },
-        {
-          "name": "-1/2 bocadillo chorizo ibérico",
-          "price": "1,95"
-        },
-        {
-          "name": "-1/2 bocadillo salchichón ibérico",
-          "price": "1,95"
-        },
-        {
-          "name": "Bocadillo queso curado",
-          "price": "3,00"
-        }
-      ]
-    },
-    {
-      "category": "CAVAS",
-      "items": [
-        {
-          "name": "Cava perelada brut",
-          "price": "10,18"
-        },
-        {
-          "name": "Cava pedrelara brut rose",
-          "price": "11,42"
-        },
-        {
-          "name": "Cava Gran Gesta Reserva Especial",
-          "price": "14,95"
-        },
-        {
-          "name": "Cava Rosé Brut – Montse",
-          "price": "10,95"
-        },
-        {
-          "name": "Copa de cava PERELADA",
-          "price": "4,50"
-        }
-      ]
-    },
-    {
-      "category": "CERVEZAS Y SIDRAS",
-      "items": [
-        {
-          "name": "Cerveza 1906 reserva 20cl",
-          "price": "1,50"
-        },
-        {
-          "name": "Cerveza dorada limon 0.5",
-          "price": "1,40"
-        },
-        {
-          "name": "Sidra ladron de manzanas",
-          "price": "1,95"
-        },
-        {
-          "name": "Cerveza paulaner",
-          "price": "3,50"
-        },
-        {
-          "name": "La choufe verlga",
-          "price": "3,50"
-        },
-        {
-          "name": "Estrella Galicia",
-          "price": "1,60"
-        }
-      ]
-    },
-    {
-      "category": "CONSERVAS CAMBADOS",
-      "items": [
-        {
-          "name": "Agujas de las rias baixas",
-          "price": "7,00"
-        },
-        {
-          "name": "Berberechos",
-          "price": "12,75"
-        },
-        {
-          "name": "Boquerones del cantabrico",
-          "price": "12,75"
-        },
-        {
-          "name": "Chipirones aove",
-          "price": "10,42"
-        },
-        {
-          "name": "Chipirones en su tinta",
-          "price": "11,50"
-        },
-        {
-          "name": "Navajas alnatural",
-          "price": "11,50"
-        },
-        {
-          "name": "Zamburiñas en salsa gallega edición limitada",
-          "price": "10,50"
-        },
-        {
-          "name": "Zamburiñas en salsa gallega",
-          "price": "6,70"
-        },
-        {
-          "name": "Pulpo en aceite de oliva",
-          "price": "8,50"
-        },
-        {
-          "name": "Berberechos  rias baixas",
-          "price": "16,50"
-        },
-        {
-          "name": "Ventresca",
-          "price": "12,12"
-        },
-        {
-          "name": "Huevas de merluza",
-          "price": "7,80"
-        }
-      ]
-    },
-    {
-      "category": "CONSERVAS REAL CONSERVERA",
-      "items": [
-        {
-          "name": "ventresca aove",
-          "price": "10,40"
-        },
-        {
-          "name": "zamburiñas en salsa",
-          "price": "8,40"
-        },
-        {
-          "name": "navajas 7/10",
-          "price": "25,20"
-        },
-        {
-          "name": "sardinillas aove",
-          "price": "10,95"
-        },
-        {
-          "name": "mejillones en escabeche",
-          "price": "12,80"
-        },
-        {
-          "name": "Berberechos grandes",
-          "price": "27,96"
-        }
-      ]
-    },
-    {
-      "category": "CHAMPAN Y CAVAS",
-      "items": [
-        {
-          "name": "Espumoso CHAMPAN VEUVE CLICQUOT",
-          "price": "64,80"
-        },
-        {
-          "name": "Espumoso CHAMPAN MOET CHANDOM",
-          "price": "48,50"
-        },
-        {
-          "name": "Espumoso Champan MUM",
-          "price": "51,00"
-        }
-      ]
-    },
-    {
-      "category": "CHOCOLATES Y BOMBONES",
-      "items": [
-        {
-          "name": "Caramelos gardiners",
-          "price": "16,50"
-        },
-        {
-          "name": "Caramelos flores",
-          "price": "15,40"
-        },
-        {
-          "name": "Chocolatina al wiski",
-          "price": "4,35"
-        },
-        {
-          "name": "Bombones pralibel",
-          "price": "24,60"
-        },
-        {
-          "name": "Chocolate velga bliss",
-          "price": "21,40"
-        },
-        {
-          "name": "Caramelos mariposas",
-          "price": "16,50"
-        },
-        {
-          "name": "Chocolates lava canarias",
-          "price": "8,75"
-        },
-        {
-          "name": "Tejas mixtas",
-          "price": "13,50"
-        },
-        {
-          "name": "Chocolate al bailys ( Irish Crean liqueur truffle)",
-          "price": "4,35"
-        }
-      ]
-    },
-    {
-      "category": "EMBUTIDOS POR PIEZAS",
-      "items": [
-        {
-          "name": "Morcon 100% 5 jotas",
-          "price": "64,30"
-        },
-        {
-          "name": "Presa media caña 5 jotas",
-          "price": "49,90"
-        },
-        {
-          "name": "Lomo media caña 5 jotas",
-          "price": "49,80"
-        },
-        {
-          "name": "Jabuguitos",
-          "price": "5,60"
-        },
-        {
-          "name": "punta chorizo",
-          "price": "9,90"
-        }
-      ]
-    },
-    {
-      "category": "HOTELES",
-      "items": [
-        {
-          "name": "Mini sobres",
-          "price": "2,35"
-        }
-      ]
-    },
-    {
-      "category": "JAMONES  IBERICOS POR PIEZAS",
-      "items": [
-        {
-          "name": "Pieza jamon 100% sanchez romero carvajal",
-          "price": "485,90"
-        },
-        {
-          "name": "Pieza Jamon cebo de campo",
-          "price": "295,60"
-        },
-        {
-          "name": "Pieza Jamon de cebo",
-          "price": "245,80"
-        }
-      ]
-    },
-    {
-      "category": "LONCHEADOS",
-      "items": [
-        {
-          "name": "Jamon 100% 80gr",
-          "price": "15,95"
-        },
-        {
-          "name": "Presa iberica 80gr",
-          "price": "8,50"
-        },
-        {
-          "name": "Lomo iberico 80gr",
-          "price": "8,90"
-        },
-        {
-          "name": "Salchichon bellota",
-          "price": "3,90"
-        },
-        {
-          "name": "Morcon iberico",
-          "price": "7,50"
-        },
-        {
-          "name": "Lomo iberico cebo",
-          "price": "6,95"
-        },
-        {
-          "name": "Chorizo iberico",
-          "price": "3,80"
-        },
-        {
-          "name": "Jamon 50% cebo",
-          "price": "7,95"
-        },
-        {
-          "name": "Jamon 50% cebo de campo",
-          "price": "11,95"
-        }
-      ]
-    },
-    {
-      "category": "MIEL",
-      "items": [
-        {
-          "name": "Miel de flores La Palma",
-          "price": "1,50"
-        },
-        {
-          "name": "Miel de palma",
-          "price": "5,85"
-        }
-      ]
-    },
-    {
-      "category": "PLATOS ELABORADOS CON CONSERVAS",
-      "items": [
-        {
-          "name": "Arbejas",
-          "price": "8,50"
-        },
-        {
-          "name": "Carrilleras de Ternera Guisadas",
-          "price": "10,50"
-        },
-        {
-          "name": "Pimientos Rellenos de Bonito",
-          "price": "7,15"
-        },
-        {
-          "name": "Bonito a la Sidra",
-          "price": "10,50"
-        },
-        {
-          "name": "Fabada Asturiana",
-          "price": "8,60"
-        }
-      ]
-    },
-    {
-      "category": "PRODUCTOS EN CARTA",
-      "items": [
-        {
-          "name": "1.Pan con aceite de la sierra de cazorla",
-          "price": "2,50"
-        },
-        {
-          "name": "2.Papas Lolita - Gourmet",
-          "price": "2,20"
-        },
-        {
-          "name": "3.  1/2 racion queso de mezcla",
-          "price": "5,80"
-        },
-        {
-          "name": "1/2 jamon 100% en carta",
-          "price": "12,40"
-        },
-        {
-          "name": "tabla de ibericos",
-          "price": "11,40"
-        },
-        {
-          "name": "1 racion de jamon 100% en carta",
-          "price": "21,60"
-        },
-        {
-          "name": "1 racion queso de mezcla",
-          "price": "9,50"
-        },
-        {
-          "name": "tabla mixta",
-          "price": "14,60"
-        },
-        {
-          "name": "1 racion queso curado oveja premium",
-          "price": "10,50"
-        },
-        {
-          "name": "Tabla degustación quesos del LAS ISLAS",
-          "price": "22,40"
-        },
-        {
-          "name": "-Chocolatina al whisky",
-          "price": "11,00"
-        },
-        {
-          "name": "-Chocolates Lava Canarias",
-          "price": "10,25"
-        },
-        {
-          "name": "-Chocolate Velga Bliss",
-          "price": "22,90"
-        },
-        {
-          "name": "-Bombones Pralibel",
-          "price": "26,10"
-        },
-        {
-          "name": "Racion papas lolita premium",
-          "price": "1,20"
-        },
-        {
-          "name": "-Tejas mixtas",
-          "price": "15,00"
-        },
-        {
-          "name": "Tosta de ibericos",
-          "price": "3,90"
-        },
-        {
-          "name": "TOSTADAS DE JAMON",
-          "price": "1,80"
-        },
-        {
-          "name": "TOSTADAS DE QUESO",
-          "price": "1,80"
-        },
-        {
-          "name": "1/2 de CEBO DE CAMPO 50% - en carta",
-          "price": "8,50"
-        },
-        {
-          "name": "1/2 QUESO CURADO OVEJA PREMIUM",
-          "price": "5,00"
-        },
-        {
-          "name": "1 de CEBO DE CAMPO 50% - en carta",
-          "price": "12,80"
-        },
-        {
-          "name": "Tapitas",
-          "price": "4,99"
-        }
-      ]
-    },
-    {
-      "category": "QUESOS",
-      "items": [
-        {
-          "name": "Cuña de queso",
-          "price": "6,50"
-        },
-        {
-          "name": "almogrote 220gr",
-          "price": "8,30"
-        },
-        {
-          "name": "Cuña de queso mezcla vaca,cabra y oveja",
-          "price": "7,50"
-        },
-        {
-          "name": "Cuña oveja premium",
-          "price": "9,50"
-        },
-        {
-          "name": "Cuña queso cabra semi",
-          "price": "7,50"
-        }
-      ]
-    },
-    {
-      "category": "REFRESCOS Y AGUA",
+      "category": "Bebidas",
       "items": [
         {
           "name": "Coca - cola original",
@@ -1126,74 +214,35 @@
         {
           "name": "AGUA CON GAS",
           "price": "1,50"
-        }
-      ]
-    },
-    {
-      "category": "SNACKS",
-      "items": [
-        {
-          "name": "Papas Lolita - Original",
-          "price": "2,50"
         },
         {
-          "name": "TORREZNOS.  400gr",
-          "price": "4,50"
-        },
-        {
-          "name": "Aceitunas chupadedos",
-          "price": "4,50"
-        },
-        {
-          "name": "sardinillas aove",
-          "price": "11,80"
-        },
-        {
-          "name": "TORREZNOS 200GR",
-          "price": "6,50"
-        },
-        {
-          "name": "Aceitunas lets go",
+          "name": "Cerveza 1906 reserva 20cl",
           "price": "1,50"
-        }
-      ]
-    },
-    {
-      "category": "SERVICIOS",
-      "items": [
-        {
-          "name": "Descorche",
-          "price": "6,00"
         },
         {
-          "name": "Servicio mesa",
-          "price": "5,00"
+          "name": "Cerveza dorada limon 0.5",
+          "price": "1,40"
         },
         {
-          "name": "Jamon Cortado y Envasado Cuchillo",
-          "price": "65,00"
-        }
-      ]
-    },
-    {
-      "category": "TAQUITOS",
-      "items": [
+          "name": "Sidra ladron de manzanas",
+          "price": "1,95"
+        },
         {
-          "name": "Taquitos de Jamón Ibérico",
+          "name": "Cerveza paulaner",
           "price": "3,50"
         },
         {
-          "name": "Taquitos de embutidos",
+          "name": "La choufe verlga",
           "price": "3,50"
         },
         {
-          "name": "Taquitos 100%",
-          "price": "4,50"
+          "name": "Estrella Galicia",
+          "price": "1,60"
         }
       ]
     },
     {
-      "category": "VERMU",
+      "category": "Vermuts",
       "items": [
         {
           "name": "Peregrino blanco",
@@ -1214,70 +263,100 @@
         {
           "name": "Ruaviejo miniatura digestivo",
           "price": "2,50"
+        },
+        {
+          "name": "Cava perelada brut",
+          "price": "10,18"
+        },
+        {
+          "name": "Cava pedrelara brut rose",
+          "price": "11,42"
+        },
+        {
+          "name": "Cava Gran Gesta Reserva Especial",
+          "price": "14,95"
+        },
+        {
+          "name": "Cava Rosé Brut – Montse",
+          "price": "10,95"
+        },
+        {
+          "name": "Copa de cava PERELADA",
+          "price": "4,50"
+        },
+        {
+          "name": "Espumoso CHAMPAN VEUVE CLICQUOT",
+          "price": "64,80"
+        },
+        {
+          "name": "Espumoso CHAMPAN MOET CHANDOM",
+          "price": "48,50"
+        },
+        {
+          "name": "Espumoso Champan MUM",
+          "price": "51,00"
         }
       ]
     },
     {
-      "category": "VINO BLANCO AFRUTADO",
+      "category": "Vinos",
       "items": [
         {
-          "name": "Vino Blanco  Afrutado  tajinaste tenerife",
+          "name": "161 Copa vino blanco afrutado canario",
+          "price": "3,90"
+        },
+        {
+          "name": "162 Copa tinto rioja",
+          "price": "3,90"
+        },
+        {
+          "name": "163 Copa vino blanco seco",
+          "price": "3,90"
+        },
+        {
+          "name": "164 Copa tinto rivera",
+          "price": "3,90"
+        },
+        {
+          "name": "165 Copa vino Yaiza afrutado",
+          "price": "4,90"
+        },
+        {
+          "name": "166 Copa vino el salvio",
+          "price": "4,90"
+        },
+        {
+          "name": "171 Vino Blanco Afrutado tajinaste tenerife",
           "price": "15,50"
         },
         {
-          "name": "Locartas blanco afrutado",
+          "name": "172 Locartas blanco afrutado",
           "price": "12,50"
         },
         {
-          "name": "Vino afrutado la jirafa",
+          "name": "173 Vino afrutado la jirafa",
           "price": "14,50"
         },
         {
-          "name": "Flor de chasna afrutado",
+          "name": "174 Flor de chasna afrutado",
           "price": "13,50"
         },
         {
-          "name": "Copa vino blanco afrutado",
+          "name": "175 Copa vino blanco afrutado",
           "price": "3,90"
-        }
-      ]
-    },
-    {
-      "category": "VINO BLANCO SECO",
-      "items": [
+        },
         {
-          "name": "Vino Blanco Carramimbre Blanco",
+          "name": "181 Vino Blanco Carramimbre Blanco",
           "price": "12,90"
         },
         {
-          "name": "Vino O Luar do Sil – Godello 75 cl",
+          "name": "182 Vino O Luar do Sil – Godello 75 cl",
           "price": "19,95"
         },
         {
-          "name": "Gran feudo hoya de lobos",
+          "name": "183 Gran feudo hoya de lobos",
           "price": "12,50"
         },
-        {
-          "name": "Hermanos lurton blanco rueda",
-          "price": "16,50"
-        },
-        {
-          "name": "Locartas blanco seco",
-          "price": "12,50"
-        },
-        {
-          "name": "Alvariño ofillo da condesa",
-          "price": "14,50"
-        },
-        {
-          "name": "CAPELLANES BLANCO SECO",
-          "price": "16,50"
-        }
-      ]
-    },
-    {
-      "category": "VINO TINTO",
-      "items": [
         {
           "name": "Vino Tinto Carramimbre Roble",
           "price": "12,50"
@@ -1317,35 +396,6 @@
         {
           "name": "Vino Tinto viña salceda rioja",
           "price": "11,64"
-        }
-      ]
-    },
-    {
-      "category": "VINO POR COPAS",
-      "items": [
-        {
-          "name": "Copa vino blanco afrutado canario",
-          "price": "3,90"
-        },
-        {
-          "name": "Copa tinto rioja",
-          "price": "3,90"
-        },
-        {
-          "name": "Copa vino blanco seco",
-          "price": "3,90"
-        },
-        {
-          "name": "Copa tinto rivera",
-          "price": "3,90"
-        },
-        {
-          "name": "Copa vino Yaiza afrutado",
-          "price": "4,90"
-        },
-        {
-          "name": "Copa vino el salvio",
-          "price": "4,90"
         }
       ]
     }
