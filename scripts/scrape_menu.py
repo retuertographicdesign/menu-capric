@@ -3,10 +3,11 @@
 Extrae la carta de El Capricho de Costa del Silencio desde Comandator
 y la guarda en menu-data.json (en la raíz del repo).
 
-Solo se sincronizan 5 secciones (a petición): Entrantes, Principales,
-Bebidas, Vermuts y Vinos. Cada una se compone agrupando una o varias
-categorías reales de Comandator (su web repite parte de la carta con
-y sin el prefijo "CARTA - "; usamos la versión numerada cuando existe).
+Solo se sincronizan las categorías que en Comandator llevan el prefijo
+"CARTA - " (su web repite parte de la carta sin ese prefijo; esas
+versiones duplicadas se ignoran). El menú de navegación resultante usa
+los nombres limpios indicados a continuación, en vez del nombre bruto
+de Comandator.
 
 La página es una app Next.js que renderiza la carta con JavaScript, así que
 necesitamos un navegador real (Playwright), no una simple petición HTTP.
@@ -30,23 +31,29 @@ MENU_URL = (
 
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "menu-data.json"
 
-# Qué categorías reales de Comandator alimentan cada una de nuestras 5
-# secciones finales, y en qué orden. Se combinan y deduplican por nombre.
-SECTION_MAP = [
-    ("Entrantes", ["CARTA - PRODUCTOS EN MESA"]),
-    ("Principales", [
-        "CARTA - PLATOS ELABORADOS CON CONSERVAS",
-        "CARTA - BOCADILLOS IBÉRICOS",
-    ]),
-    ("Bebidas", ["REFRESCOS Y AGUA", "CERVEZAS Y SIDRAS"]),
-    ("Vermuts", ["VERMU", "CAVAS", "CHAMPAN Y CAVAS"]),
-    ("Vinos", [
-        "CARTA - VINO POR COPAS",
-        "CARTA - VINO BLANCO AFRUTADO",
-        "CARTA - VINO BLANCO SECO",
-        "VINO TINTO",
-    ]),
-]
+# Nombre limpio a mostrar en el menú de navegación para cada categoría
+# "CARTA - X" de Comandator. La clave es el nombre SIN el prefijo,
+# normalizado en mayúsculas para que la comparación no dependa de cómo
+# Comandator lo capitalice. El orden de este diccionario es el orden en
+# que aparecerán las secciones en la carta.
+DISPLAY_NAMES = {
+    "PRODUCTOS EN MESA": "Productos en mesa",
+    "PLATOS ELABORADOS CON CONSERVAS": "Platos elaborados con conservas",
+    "CONSERVAS CAMBADOS": "Conservas Cambados",
+    "CONSERVAS REAL CONSERVERA": "Conservas Real Conservera",
+    "ANCHOAS": "Anchoas",
+    "LONCHEADOS": "Loncheados",
+    "TAQUITOS": "Taquitos",
+    "BOCADILLOS IBÉRICOS": "Bocadillos ibéricos",
+    "MONTADITOS": "Montaditos",
+    "QUESOS": "Quesos",
+    "SNACKS": "Snacks",
+    "SMOOTHIES": "Smoothies",
+    "CAFÉ": "Café",
+    "VINO POR COPAS": "Vino por copas",
+    "VINO BLANCO AFRUTADO": "Vino blanco afrutado",
+    "VINO BLANCO SECO": "Vino blanco seco",
+}
 
 # JS que corre DENTRO de la página ya renderizada para extraer categoría -> items.
 # Mismos selectores verificados manualmente sobre la página real (Material UI).
@@ -74,6 +81,8 @@ EXTRACT_JS = """
 }
 """
 
+CARTA_PREFIX_RE = re.compile(r"^\s*carta\s*[-–—:]\s*", re.IGNORECASE)
+
 
 def clean_price(raw: str) -> str:
     """'18.50 €' -> '18,50'. Normaliza a coma decimal, sin símbolo de euro."""
@@ -81,8 +90,8 @@ def clean_price(raw: str) -> str:
     return num
 
 
-def scrape_raw() -> dict:
-    """Devuelve {nombre_categoria_comandator: [ {name, price}, ... ]}."""
+def scrape_raw() -> list[dict]:
+    """Devuelve [{category, items: [{name, price}, ...]}, ...] tal cual viene de la web."""
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page()
@@ -92,45 +101,53 @@ def scrape_raw() -> dict:
         raw = page.evaluate(EXTRACT_JS)
         browser.close()
 
-    by_category = {}
+    result = []
     for cat in raw:
         items = [
             {"name": it["name"], "price": clean_price(it["price"])}
             for it in cat["items"]
         ]
-        by_category[cat["category"]] = items
-    return by_category
+        result.append({"category": cat["category"], "items": items})
+    return result
 
 
-def build_sections(by_category: dict) -> list[dict]:
+def build_sections(raw_categories: list[dict]) -> list[dict]:
+    """Filtra solo las categorías 'CARTA - X' y las renombra según DISPLAY_NAMES,
+    en el orden fijo de DISPLAY_NAMES (no en el orden en que llegan de la web)."""
+    by_clean_name = {}
+    for cat in raw_categories:
+        raw_name = cat["category"]
+        if not CARTA_PREFIX_RE.match(raw_name):
+            continue
+        clean = CARTA_PREFIX_RE.sub("", raw_name).strip().upper()
+        by_clean_name[clean] = cat["items"]
+
     sections = []
-    for section_name, source_categories in SECTION_MAP:
-        seen = set()
-        items = []
-        for src in source_categories:
-            for it in by_category.get(src, []):
-                key = (it["name"], it["price"])
-                if key in seen:
-                    continue
-                seen.add(key)
-                items.append(it)
-        if not items:
-            print(f"AVISO: la sección '{section_name}' no encontró productos "
-                  f"(categorías buscadas: {source_categories}).", file=sys.stderr)
-        sections.append({"category": section_name, "items": items})
+    for clean_key, display_name in DISPLAY_NAMES.items():
+        items = by_clean_name.get(clean_key)
+        if items is None:
+            print(f"AVISO: no se encontró la sección 'CARTA - {clean_key}' "
+                  f"en Comandator (¿cambió de nombre?).", file=sys.stderr)
+            continue
+        sections.append({"category": display_name, "items": items})
     return sections
 
 
 def main() -> int:
-    by_category = scrape_raw()
+    raw_categories = scrape_raw()
 
-    if not by_category:
+    if not raw_categories:
         print("ERROR: no se extrajo ninguna categoría. Comandator puede haber "
               "cambiado su estructura (selectores CSS) o la página no cargó bien.",
               file=sys.stderr)
         return 1
 
-    sections = build_sections(by_category)
+    sections = build_sections(raw_categories)
+    if not sections:
+        print("ERROR: ninguna categoría 'CARTA - X' coincidió con DISPLAY_NAMES.",
+              file=sys.stderr)
+        return 1
+
     total_items = sum(len(s["items"]) for s in sections)
     print(f"Generadas {len(sections)} secciones, {total_items} productos.")
 
