@@ -1,9 +1,9 @@
 {
   "source": "https://www.comandator.com/es/establecimiento/capricho-de-costa-del-silencio-tenerife-arona/menu",
-  "scraped_at": "2026-08-21T06:32:38.192623+00:00",
+  "scraped_at": "2026-08-21T11:44:57.454620+00:00",
   "categories": [
     {
-      "category": "Entrantes",
+      "category": "Productos en mesa",
       "items": [
         {
           "name": "001 1/2 racion queso de mezcla",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "category": "Principales",
+      "category": "Platos elaborados con conservas",
       "items": [
         {
           "name": "031 Arbejas",
@@ -137,7 +137,173 @@
         {
           "name": "035 Fabada Asturiana",
           "price": "8,60"
+        }
+      ]
+    },
+    {
+      "category": "Conservas Cambados",
+      "items": [
+        {
+          "name": "041 Agujas de las rias baixas",
+          "price": "7,00"
         },
+        {
+          "name": "042 Berberechos",
+          "price": "12,75"
+        },
+        {
+          "name": "043 Boquerones del cantabrico",
+          "price": "12,75"
+        },
+        {
+          "name": "044 Chipirones aove",
+          "price": "10,42"
+        },
+        {
+          "name": "045 Chipirones en su tinta",
+          "price": "11,50"
+        },
+        {
+          "name": "046 Navajas alnatural",
+          "price": "11,50"
+        },
+        {
+          "name": "047 Zamburiñas en salsa gallega edición limitada",
+          "price": "10,50"
+        },
+        {
+          "name": "048 Zamburiñas en salsa gallega",
+          "price": "6,70"
+        },
+        {
+          "name": "049 Pulpo en aceite de oliva",
+          "price": "8,50"
+        },
+        {
+          "name": "050 Berberechos rias baixas",
+          "price": "16,50"
+        },
+        {
+          "name": "051 Ventresca",
+          "price": "12,12"
+        },
+        {
+          "name": "052 Huevas de merluza",
+          "price": "7,80"
+        }
+      ]
+    },
+    {
+      "category": "Conservas Real Conservera",
+      "items": [
+        {
+          "name": "061 ventresca aove",
+          "price": "10,40"
+        },
+        {
+          "name": "063 navajas 7/10",
+          "price": "25,20"
+        },
+        {
+          "name": "062 zamburiñas en salsa",
+          "price": "8,40"
+        },
+        {
+          "name": "064 sardinillas aove",
+          "price": "10,95"
+        },
+        {
+          "name": "065 mejillones en escabeche",
+          "price": "12,80"
+        },
+        {
+          "name": "066 Berberechos grandes",
+          "price": "27,96"
+        }
+      ]
+    },
+    {
+      "category": "Anchoas",
+      "items": [
+        {
+          "name": "071 anchoas lata pequeña",
+          "price": "7,80"
+        },
+        {
+          "name": "072 anchoas premium",
+          "price": "18,60"
+        },
+        {
+          "name": "gildas",
+          "price": "23,20"
+        }
+      ]
+    },
+    {
+      "category": "Loncheados",
+      "items": [
+        {
+          "name": "081 Jamon 100% 80gr",
+          "price": "15,95"
+        },
+        {
+          "name": "082 Presa iberica 80gr",
+          "price": "8,50"
+        },
+        {
+          "name": "083 Lomo iberico 80gr",
+          "price": "8,90"
+        },
+        {
+          "name": "084 Salchichon bellota",
+          "price": "3,90"
+        },
+        {
+          "name": "085 Morcon iberico",
+          "price": "7,50"
+        },
+        {
+          "name": "086 Lomo iberico cebo",
+          "price": "6,95"
+        },
+        {
+          "name": "087 Chorizo iberico",
+          "price": "3,80"
+        },
+        {
+          "name": "088 Jamon 50% cebo",
+          "price": "7,95"
+        },
+        {
+          "name": "089 Jamon 50% cebo de campo",
+          "price": "11,95"
+        },
+        {
+          "name": "LOMO IBERICO 250 G - EMBASADO AL VACIO",
+          "price": "24,00"
+        }
+      ]
+    },
+    {
+      "category": "Taquitos",
+      "items": [
+        {
+          "name": "091 Taquitos de Jamón Ibérico",
+          "price": "3,50"
+        },
+        {
+          "name": "092 Taquitos de embutidos",
+          "price": "3,50"
+        },
+        {
+          "name": "093 Taquitos 100%",
+          "price": "4,50"
+        }
+      ]
+    },
+    {
+      "category": "Bocadillos ibéricos",
+      "items": [
         {
           "name": "101 1/2 bocadillo jamon iberico",
           "price": "3,45"
@@ -169,137 +335,76 @@
       ]
     },
     {
-      "category": "Bebidas",
+      "category": "Montaditos",
       "items": [
         {
-          "name": "Coca - cola original",
-          "price": "1,80"
+          "name": "111 MONTADITOS",
+          "price": "3,50"
+        }
+      ]
+    },
+    {
+      "category": "Quesos",
+      "items": [
+        {
+          "name": "122 almogrote 220gr",
+          "price": "8,30"
         },
         {
-          "name": "Cocacola 0",
-          "price": "1,80"
-        },
+          "name": "Cuña de queso",
+          "price": "7,80"
+        }
+      ]
+    },
+    {
+      "category": "Snacks",
+      "items": [
         {
-          "name": "Agua solan de cabras 20",
-          "price": "1,25"
-        },
-        {
-          "name": "fanta",
-          "price": "1,80"
-        },
-        {
-          "name": "Sprite",
-          "price": "1,80"
-        },
-        {
-          "name": "Nestea Mango piña",
-          "price": "2,20"
-        },
-        {
-          "name": "Acuarius limon",
-          "price": "2,20"
-        },
-        {
-          "name": "Fanta limon",
-          "price": "1,80"
-        },
-        {
-          "name": "TONICA SABORES",
+          "name": "131 Papas Lolita - Original",
           "price": "2,50"
         },
         {
-          "name": "AGUA GRANDE- DE SOLAN",
-          "price": "2,50"
+          "name": "132 TORREZNOS. 400gr",
+          "price": "4,50"
         },
         {
-          "name": "AGUA CON GAS",
+          "name": "133 Aceitunas chupadedos",
+          "price": "4,50"
+        },
+        {
+          "name": "134 sardinillas aove",
+          "price": "11,80"
+        },
+        {
+          "name": "135 TORREZNOS 200GR",
+          "price": "6,50"
+        },
+        {
+          "name": "136 Aceitunas lets go",
           "price": "1,50"
-        },
+        }
+      ]
+    },
+    {
+      "category": "Smoothies",
+      "items": [
         {
-          "name": "Cerveza 1906 reserva 20cl",
-          "price": "1,50"
-        },
+          "name": "141 SMOOTHIES - batidos de fruta",
+          "price": "4,50"
+        }
+      ]
+    },
+    {
+      "category": "Café",
+      "items": [
         {
-          "name": "Cerveza dorada limon 0.5",
-          "price": "1,40"
-        },
-        {
-          "name": "Sidra ladron de manzanas",
-          "price": "1,95"
-        },
-        {
-          "name": "Cerveza paulaner",
-          "price": "3,50"
-        },
-        {
-          "name": "La choufe verlga",
-          "price": "3,50"
-        },
-        {
-          "name": "Estrella Galicia",
+          "name": "151 CAFE",
           "price": "1,60"
         }
       ]
     },
     {
-      "category": "Vermuts",
-      "items": [
-        {
-          "name": "Peregrino blanco",
-          "price": "14,50"
-        },
-        {
-          "name": "Vermu copa",
-          "price": "3,90"
-        },
-        {
-          "name": "Peregrino rojo",
-          "price": "14,50"
-        },
-        {
-          "name": "Cabecita loca",
-          "price": "19,80"
-        },
-        {
-          "name": "Ruaviejo miniatura digestivo",
-          "price": "2,50"
-        },
-        {
-          "name": "Cava perelada brut",
-          "price": "10,18"
-        },
-        {
-          "name": "Cava pedrelara brut rose",
-          "price": "11,42"
-        },
-        {
-          "name": "Cava Gran Gesta Reserva Especial",
-          "price": "14,95"
-        },
-        {
-          "name": "Cava Rosé Brut – Montse",
-          "price": "10,95"
-        },
-        {
-          "name": "Copa de cava PERELADA",
-          "price": "4,50"
-        },
-        {
-          "name": "Espumoso CHAMPAN VEUVE CLICQUOT",
-          "price": "64,80"
-        },
-        {
-          "name": "Espumoso CHAMPAN MOET CHANDOM",
-          "price": "48,50"
-        },
-        {
-          "name": "Espumoso Champan MUM",
-          "price": "51,00"
-        }
-      ]
-    },
-    {
-      "category": "Vinos",
+      "category": "Vino por copas",
       "items": [
         {
           "name": "161 Copa vino blanco afrutado canario",
@@ -324,7 +429,12 @@
         {
           "name": "166 Copa vino el salvio",
           "price": "4,90"
-        },
+        }
+      ]
+    },
+    {
+      "category": "Vino blanco afrutado",
+      "items": [
         {
           "name": "171 Vino Blanco Afrutado tajinaste tenerife",
           "price": "15,50"
@@ -344,7 +454,12 @@
         {
           "name": "175 Copa vino blanco afrutado",
           "price": "3,90"
-        },
+        }
+      ]
+    },
+    {
+      "category": "Vino blanco seco",
+      "items": [
         {
           "name": "181 Vino Blanco Carramimbre Blanco",
           "price": "12,90"
@@ -356,46 +471,6 @@
         {
           "name": "183 Gran feudo hoya de lobos",
           "price": "12,50"
-        },
-        {
-          "name": "Vino Tinto Carramimbre Roble",
-          "price": "12,50"
-        },
-        {
-          "name": "Juan gil jumilla",
-          "price": "13,60"
-        },
-        {
-          "name": "Vino la planta tinto rduero",
-          "price": "12,50"
-        },
-        {
-          "name": "Pesquera rduero",
-          "price": "29,50"
-        },
-        {
-          "name": "Capellanes roble",
-          "price": "26,50"
-        },
-        {
-          "name": "Capellanes Crianza gran reserva",
-          "price": "39,50"
-        },
-        {
-          "name": "Vino locartas tinto",
-          "price": "12,50"
-        },
-        {
-          "name": "Vino Tinto salvio",
-          "price": "19,80"
-        },
-        {
-          "name": "Roquesan rivera del duero",
-          "price": "12,40"
-        },
-        {
-          "name": "Vino Tinto viña salceda rioja",
-          "price": "11,64"
         }
       ]
     }
