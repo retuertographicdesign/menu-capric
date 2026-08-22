@@ -1,6 +1,6 @@
 {
   "source": "https://www.comandator.com/es/establecimiento/capricho-de-costa-del-silencio-tenerife-arona/menu",
-  "scraped_at": "2026-08-21T13:30:26.665700+00:00",
+  "scraped_at": "2026-08-22T06:25:35.095737+00:00",
   "categories": [
     {
       "category": "Productos en mesa",
@@ -281,6 +281,10 @@
         {
           "name": "LOMO IBERICO 250 G - EMBASADO AL VACIO",
           "price": "24,00"
+        },
+        {
+          "name": "Jamon 100% 100gr",
+          "price": "18,95"
         }
       ]
     },
