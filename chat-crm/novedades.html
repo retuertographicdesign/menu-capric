@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novedades · Chat CRM by Retuerto Graphic Design</title>
+<meta name="description" content="Novedades de Chat CRM: nuevas funcionalidades, canales, integraciones y notas de versión.">
+<meta property="og:title" content="Novedades · Chat CRM">
+<meta property="og:description" content="Nuevas funcionalidades, canales, integraciones y notas de versión de Chat CRM.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%235B7CFA'/%3E%3Cpath d='M78 46.5a30 30 0 0 1-3.2 13.5 30.5 30.5 0 0 1-27.3 16.9 30 30 0 0 1-13.5-3.2L20 78l6.8-20.4A30 30 0 0 1 23.6 44 30.5 30.5 0 0 1 40.5 16.7 30 30 0 0 1 54 13.5h1.8A30.4 30.4 0 0 1 84 41.9z' fill='none' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div id="site-header-slot"></div>
+
+<section class="novedades-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="novedades_eyebrow">Últimas noticias</span>
+    <h1><span data-i18n="novedades_title1">Lo nuevo en</span><span class="accent" data-i18n="novedades_title2">Chat CRM</span></h1>
+  </div>
+</section>
+
+<section class="novedades-list">
+  <div class="wrap">
+    <div class="nov-grid" id="novGrid">
+      <div class="nov-empty" data-i18n="novedades_empty">Todavía no hay novedades publicadas. Vuelve pronto.</div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer-slot"></div>
+
+<script src="assets/i18n.js"></script>
+<script>
+  /* Los artículos se leen de novedades-data.json: para publicar uno nuevo
+     basta con añadir su entrada ahí y crear novedades/<slug>.html */
+  let novedadesCache = null;
+
+  async function renderPosts(lang){
+    const grid = document.getElementById('novGrid');
+    const t = I18N[lang] || I18N.es;
+    try{
+      if (!novedadesCache){
+        const res = await fetch('novedades-data.json', { cache: 'no-store' });
+        novedadesCache = (await res.json()).posts || [];
+      }
+      const posts = [...novedadesCache].sort((a,b) => new Date(b.date) - new Date(a.date));
+      if (!posts.length){
+        grid.innerHTML = `<div class="nov-empty">${t.novedades_empty}</div>`;
+        return;
+      }
+      grid.innerHTML = posts.map(p => {
+        const title = lang === 'en' ? (p.title_en || p.title_es) : p.title_es;
+        const excerpt = lang === 'en' ? (p.excerpt_en || p.excerpt_es) : p.excerpt_es;
+        const dateStr = new Date(p.date + 'T00:00:00').toLocaleDateString(lang === 'en' ? 'en-GB' : 'es-ES', {day:'numeric', month:'long', year:'numeric'});
+        const thumb = p.image
+          ? `<div class="thumb"><img src="${p.image}" alt="${title}" loading="lazy"></div>`
+          : `<div class="thumb"></div>`;
+        return `<article class="nov-card">
+          ${thumb}
+          <div class="body">
+            <div class="nov-date">${dateStr}</div>
+            <h3>${title}</h3>
+            <p>${excerpt}</p>
+            <a class="read-more" href="novedades/${p.slug}.html">${t.read_more}</a>
+          </div>
+        </article>`;
+      }).join('');
+    }catch(err){
+      grid.innerHTML = `<div class="nov-empty">${t.novedades_empty}</div>`;
+    }
+  }
+  function onLanguageChange(lang){ renderPosts(lang); }
+</script>
+<script>window.SITE_PREFIX = "";</script>
+<script src="assets/site-common.js"></script>
+
+</body>
+</html>
