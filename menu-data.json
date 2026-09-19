@@ -1,6 +1,6 @@
 {
   "source": "https://www.comandator.com/es/establecimiento/capricho-de-costa-del-silencio-tenerife-arona/menu",
-  "scraped_at": "2026-09-18T10:19:15.155126+00:00",
+  "scraped_at": "2026-09-19T10:02:06.358181+00:00",
   "categories": [
     {
       "category": "Productos en mesa",
@@ -190,6 +190,10 @@
         {
           "name": "052 Huevas de merluza",
           "price": "7,80"
+        },
+        {
+          "name": "ESPÁRRAGOS BLANCOS -asensio",
+          "price": "5,00"
         }
       ]
     },
